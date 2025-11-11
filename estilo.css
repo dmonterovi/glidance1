@@ -1,0 +1,513 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* Cambiada la tipografía a Lora para un aspecto más elegante y refinado */
+  font-family: "Lora", "Georgia", serif;
+  background: linear-gradient(180deg, #0a0e1a 0%, #1a1f35 50%, #0a0e1a 100%);
+  color: #e8edf5;
+  line-height: 1.8;
+}
+
+/* Header con título a la izquierda arriba del menú */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: linear-gradient(135deg, #0d1117 0%, #161b22 100%);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+  border-bottom: 2px solid #4a90e2;
+  padding: 2rem 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  backdrop-filter: blur(10px);
+}
+
+/* Contenedor del título y logo */
+.title-container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.hero-logo {
+  width: 95px;
+  height: 95px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(0 4px 12px rgba(74, 144, 226, 0.4));
+}
+
+.hero-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Título principal con tipografía Playfair Display para mayor elegancia */
+.main-title {
+  font-size: 5rem;
+  background: linear-gradient(135deg, #6eb6ff 0%, #a78bfa 50%, #f093fb 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 900;
+  letter-spacing: 0.2em;
+  font-family: "Playfair Display", "Georgia", serif;
+  line-height: 1;
+  text-transform: uppercase;
+  position: relative;
+  filter: drop-shadow(0 0 20px rgba(110, 182, 255, 0.4));
+  animation: elegantGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes elegantGlow {
+  from {
+    filter: drop-shadow(0 0 15px rgba(110, 182, 255, 0.5));
+  }
+  to {
+    filter: drop-shadow(0 0 25px rgba(167, 139, 250, 0.7));
+  }
+}
+
+.main-title::after {
+  content: "";
+  position: absolute;
+  bottom: -12px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent 0%, #6eb6ff 20%, #a78bfa 50%, #f093fb 80%, transparent 100%);
+  border-radius: 2px;
+  box-shadow: 0 0 20px rgba(110, 182, 255, 0.5);
+}
+
+/* Navegación a la derecha */
+nav {
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+nav li {
+  position: relative;
+}
+
+/* Enlaces de navegación con tipografía más refinada */
+nav a {
+  display: block;
+  padding: 0.9rem 1.8rem;
+  color: #a8c5e8;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 2px solid transparent;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  background: rgba(74, 144, 226, 0.08);
+  border-radius: 4px;
+  font-family: "Cormorant Garamond", serif;
+}
+
+nav a:hover {
+  background: linear-gradient(135deg, rgba(74, 144, 226, 0.25) 0%, rgba(139, 92, 246, 0.25) 100%);
+  border-color: #6eb6ff;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(74, 144, 226, 0.3);
+}
+
+/* Main sin restricciones de ancho */
+main {
+  padding: 0;
+  width: 100%;
+}
+
+/* Secciones con mejor espaciado y diseño más elegante */
+section {
+  position: relative;
+  padding: 7rem 4rem;
+  width: 100%;
+  min-height: 450px;
+  margin-bottom: 0;
+  border: none;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Secciones impares alineadas a la izquierda */
+section:nth-child(odd) {
+  text-align: left;
+  padding-left: 8rem;
+  padding-right: 25%;
+}
+
+/* Secciones pares alineadas a la derecha */
+section:nth-child(even) {
+  text-align: right;
+  padding-right: 8rem;
+  padding-left: 25%;
+}
+
+/* Colores más sofisticados y sutiles para cada sección */
+#que-es {
+  background: linear-gradient(135deg, rgba(74, 144, 226, 0.12) 0%, rgba(74, 144, 226, 0.06) 100%);
+}
+
+#por-que-incluido {
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.12) 0%, rgba(139, 92, 246, 0.06) 100%);
+}
+
+#como-funciona {
+  background: linear-gradient(135deg, rgba(6, 182, 212, 0.12) 0%, rgba(6, 182, 212, 0.06) 100%);
+}
+
+#evolucion {
+  background: linear-gradient(135deg, rgba(249, 115, 22, 0.12) 0%, rgba(249, 115, 22, 0.06) 100%);
+}
+
+#enlaces {
+  background: linear-gradient(135deg, rgba(236, 72, 153, 0.12) 0%, rgba(236, 72, 153, 0.06) 100%);
+}
+
+#redes {
+  background: linear-gradient(135deg, rgba(34, 197, 94, 0.12) 0%, rgba(34, 197, 94, 0.06) 100%);
+  padding: 3rem 4rem;
+  min-height: auto;
+}
+
+/* Títulos h3 con tipografía Playfair Display más elegante */
+section h3 {
+  font-size: 2.5rem;
+  color: #7eb8ff;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-family: "Playfair Display", serif;
+  text-shadow: 0 2px 12px rgba(126, 184, 255, 0.3);
+}
+
+/* Contenido h2 con mejor legibilidad y elegancia */
+section h2 {
+  font-size: 1.6rem;
+  color: #e8edf5;
+  font-weight: 400;
+  line-height: 2;
+  margin-bottom: 2.5rem;
+  font-family: "Lora", serif;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Efectos hover más sutiles y elegantes */
+section:hover {
+  background: linear-gradient(135deg, rgba(74, 144, 226, 0.18) 0%, rgba(74, 144, 226, 0.1) 100%);
+  transform: translateY(-3px);
+}
+
+#por-que-incluido:hover {
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.18) 0%, rgba(139, 92, 246, 0.1) 100%);
+}
+
+#como-funciona:hover {
+  background: linear-gradient(135deg, rgba(6, 182, 212, 0.18) 0%, rgba(6, 182, 212, 0.1) 100%);
+}
+
+#evolucion:hover {
+  background: linear-gradient(135deg, rgba(249, 115, 22, 0.18) 0%, rgba(249, 115, 22, 0.1) 100%);
+}
+
+#enlaces:hover {
+  background: linear-gradient(135deg, rgba(20, 207, 13, 0.18) 0%, rgba(236, 72, 153, 0.1) 100%);
+}
+
+#redes:hover {
+  background: linear-gradient(135deg, rgba(34, 197, 94, 0.18) 0%, rgba(34, 197, 94, 0.1) 100%);
+}
+
+/* Estilos para las imágenes de las secciones */
+.section-image {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  margin-top: 2.5rem;
+  /* Añadido object-fit para mejor presentación de imágenes */
+  object-fit: cover;
+  display: block;
+  border-radius: 16px;
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(126, 184, 255, 0.15);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 3px solid rgba(126, 184, 255, 0.3);
+  object-fit: cover;
+  display: block;
+  position: relative;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.02);
+  padding: 8px;
+}
+
+/* Ajuste de alineación de imágenes según la sección */
+section:nth-child(odd) .section-image {
+  margin-left: 0;
+  margin-right: auto;
+  transform: perspective(1000px) rotateY(-2deg);
+}
+
+section:nth-child(even) .section-image {
+  margin-left: auto;
+  margin-right: 0;
+  transform: perspective(1000px) rotateY(2deg);
+}
+
+.section-image:hover {
+  transform: scale(1.05) perspective(1000px) rotateY(0deg);
+  box-shadow: 0 20px 60px rgba(74, 144, 226, 0.6), 0 0 0 2px rgba(126, 184, 255, 0.5);
+  border-color: rgba(126, 184, 255, 0.7);
+}
+
+/* Beneficios con diseño más refinado */
+.Beneficios {
+  margin: 2.5rem 0;
+  padding: 2.5rem;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.02) 100%);
+  border-left: 4px solid #6eb6ff;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.Beneficios::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(110, 182, 255, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.Beneficios:hover {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.04) 100%);
+  border-left-width: 6px;
+  transform: translateX(12px);
+  box-shadow: 0 8px 32px rgba(110, 182, 255, 0.3);
+}
+
+.Beneficios h3 {
+  font-size: 1.4rem;
+  color: #a8c5e8;
+  margin-bottom: 1.5rem;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  position: relative;
+  z-index: 1;
+}
+
+/* Imágenes dentro de beneficios con mejor presentación */
+.Beneficios img {
+  width: 100%;
+  max-width: 300px;
+  height: 200px;
+  border-radius: 12px;
+  margin-top: 1.5rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(110, 182, 255, 0.2);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  object-fit: cover;
+  display: block;
+  border: 2px solid rgba(110, 182, 255, 0.25);
+  position: relative;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.Beneficios img:hover {
+  transform: scale(1.08) translateY(-4px);
+  box-shadow: 0 12px 36px rgba(110, 182, 255, 0.5), 0 0 0 2px rgba(110, 182, 255, 0.5);
+  border-color: rgba(110, 182, 255, 0.6);
+}
+
+.redes {
+  display: inline-block;
+  margin: 1rem;
+  padding: 0.8rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.redes:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(74, 144, 226, 0.3);
+}
+
+.redes img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+section ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+/* Lista con mejor espaciado y diseño */
+section ul li {
+  margin: 1.5rem 0;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.04);
+  border-left: 3px solid #7eb8ff;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+}
+
+section ul li:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-left-width: 5px;
+  transform: translateX(8px);
+}
+
+/* Enlaces con diseño más elegante y refinado */
+section ul li a {
+  color: #7eb8ff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: 1.25rem;
+  cursor: pointer;
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background: rgba(74, 144, 226, 0.15);
+  border-radius: 6px;
+  border: 2px solid rgba(126, 184, 255, 0.3);
+  font-family: "Cormorant Garamond", serif;
+  letter-spacing: 0.03em;
+}
+
+section ul li a:hover {
+  color: #ffffff;
+  background: rgba(74, 144, 226, 0.35);
+  border-color: #7eb8ff;
+  transform: translateX(8px) scale(1.02);
+  box-shadow: 0 4px 20px rgba(74, 144, 226, 0.4);
+}
+
+/* Footer con diseño más sofisticado */
+footer {
+  background: linear-gradient(135deg, #0d1117 0%, #161b22 100%);
+  padding: 3.5rem;
+  text-align: center;
+  border-top: 2px solid #4a90e2;
+  box-shadow: 0 -8px 32px rgba(0, 0, 0, 0.6);
+  margin-top: 4rem;
+}
+
+footer hr {
+  border: none;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, #6eb6ff 50%, transparent 100%);
+  margin-bottom: 2.5rem;
+  box-shadow: 0 0 10px rgba(110, 182, 255, 0.3);
+}
+
+footer p {
+  color: #a8c5e8;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  margin: 0.8rem 0;
+  font-family: "Lora", serif;
+}
+
+footer p:first-of-type {
+  color: #7eb8ff;
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 1.2rem;
+  font-family: "Playfair Display", serif;
+  letter-spacing: 0.08em;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+  header {
+    padding: 1.5rem 2rem;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  /* Ajuste responsive del título */
+  .main-title {
+    font-size: 3rem;
+    letter-spacing: 0.1em;
+  }
+
+  .hero-logo {
+    width: 60px;
+    height: 60px;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  nav a {
+    padding: 0.7rem 1.2rem;
+    font-size: 0.8rem;
+  }
+
+  section:nth-child(odd),
+  section:nth-child(even) {
+    text-align: left;
+    padding: 4rem 2rem;
+  }
+
+  section h3 {
+    font-size: 2rem;
+  }
+
+  section h2 {
+    font-size: 1.3rem;
+  }
+
+  .section-image {
+    max-width: 100%;
+    /* Centrado de imágenes en móvil */
+    margin-left: auto;
+    margin-right: auto;
+    transform: none;
+  }
+
+  /* Sobrescribir alineación en móvil para centrar todas las imágenes */
+  section:nth-child(odd) .section-image,
+  section:nth-child(even) .section-image {
+    margin-left: auto;
+    margin-right: auto;
+    transform: none;
+  }
+
+  .section-image:hover {
+    transform: scale(1.03);
+  }
+}
